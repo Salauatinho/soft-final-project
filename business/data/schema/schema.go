@@ -29,43 +29,27 @@ CREATE TABLE users (
 	},
 	{
 		Version:     1.2,
-		Description: "Create table supermarkets",
+		Description: "Create table cafes",
 		Script: `
-CREATE TABLE supermarkets (
-	supermarket_id UUID,
-	name           TEXT,
-	address   	   TEXT,
-	user_id        UUID,
-	date_created   TIMESTAMP,
-	date_updated   TIMESTAMP,
+CREATE TABLE cafes (
+	cafe_id      UUID,
+	name         TEXT,
+	date_created TIMESTAMP,
+	date_updated TIMESTAMP,
 	PRIMARY KEY (supermarket_id)
 );`,
 	},
 	{
 		Version:     1.3,
-		Description: "Create table category",
+		Description: "Create table staff",
 		Script: `
-CREATE TABLE categories (
-	category_id    UUID,
-	name       	   TEXT,
-	supermarket_id UUID,
-	date_created   TIMESTAMP,
-	date_updated   TIMESTAMP,
-	PRIMARY KEY (category_id)
-);`,
-	},
-	{
-		Version:     1.4,
-		Description: "Create table good",
-		Script: `
-CREATE TABLE goods (
-	good_id   	 UUID,
-	name         TEXT,
-	price 		 INTEGER,
-	category_id  UUID,
+CREATE TABLE staffs (
+	staff_id     UUID,
+	position  	 TEXT,
+	fio  		 TEXT,
 	date_created TIMESTAMP,
 	date_updated TIMESTAMP,
-	PRIMARY KEY (good_id)
+	PRIMARY KEY (category_id)
 );`,
 	},
 }
