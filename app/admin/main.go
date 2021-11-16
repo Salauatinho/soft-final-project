@@ -20,9 +20,9 @@ import (
 //openssl rsa -pubout -in private.pem -out public.pem
 
 func main() {
-	keygen()
+	//keygen()
 	//tokengen()
-	//migrate()
+	migrate()
 }
 
 func migrate() {
