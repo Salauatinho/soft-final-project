@@ -36,7 +36,7 @@ CREATE TABLE cafes (
 	name         TEXT,
 	date_created TIMESTAMP,
 	date_updated TIMESTAMP,
-	PRIMARY KEY (supermarket_id)
+	PRIMARY KEY (cafe_id)
 );`,
 	},
 	{
@@ -47,9 +47,11 @@ CREATE TABLE staffs (
 	staff_id     UUID,
 	position  	 TEXT,
 	fio  		 TEXT,
+	user_id      UUID,
+	cafe_id      UUID,
 	date_created TIMESTAMP,
 	date_updated TIMESTAMP,
-	PRIMARY KEY (category_id)
+	PRIMARY KEY (staff_id)
 );`,
 	},
 }
